@@ -1,0 +1,58 @@
+footer {
+  padding: 54px 0;
+  background-color: $colorBlack;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include forMobile {
+    flex-direction: column;
+    gap: 25px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    * {
+      font-family: $main-font;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      color: #fff;
+      opacity: 0.7;
+      @include forMobile {
+        text-align: center;
+      }
+    }
+    &--email-tel {
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+      @include forMinMobile {
+        flex-direction: column;
+      }
+      a:hover {
+        opacity: 1;
+      }
+    }
+  }
+  &__socials {
+    display: flex;
+    align-items: center;
+    column-gap: 27px;
+    i {
+      font-size: 25px;
+      color: #6d6e76;
+      transition: all 0.1s ease;
+    }
+  }
+}
+.footer-img:hover {
+  fill: #fa4ba8;
+}
+
+.footer-img:active {
+  fill: aqua;
+}
